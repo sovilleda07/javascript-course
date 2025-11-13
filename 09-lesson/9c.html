@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9c</title>
+</head>
+<body>
+  <button onclick="updateChoise('heads')">heads</button>
+  <button onclick="updateChoise('tails')">tails</button>
+  <p class="js-choise"></p>
+
+  <script>
+    function updateChoise(choice) {
+      document.querySelector('.js-choise').innerHTML = `You chose: ${choice}`;
+    }
+  </script>
+</body>
+</html>

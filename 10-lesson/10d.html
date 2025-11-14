@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 10d</title>
+  <style>
+    .toggle-button {
+      background-color: lightgrey;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .is-toggled {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-button" onclick="changeStatus()">Gaming</button>
+
+  <script>
+    function changeStatus() {
+      const buttonElement = document.querySelector('.toggle-button');
+
+      if (!buttonElement.classList.contains('is-toggled')) {
+        buttonElement.classList.add('is-toggled');
+      } else {
+        buttonElement.classList.remove('is-toggled');
+      }
+    }
+  </script>
+</body>
+</html>

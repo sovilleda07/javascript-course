@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 12d</title>
+</head>
+<body>
+  <button class="js-button" onclick="changeText();">Start</button>
+
+  <script>
+    function changeText() {
+      let button = document.querySelector('.js-button');
+      
+      button.innerHTML = 'Loading...';
+      
+      setTimeout(function() {
+        button.innerHTML = 'Finished!'
+      },1000)
+    }
+  </script>
+</body>
+</html>

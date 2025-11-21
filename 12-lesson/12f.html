@@ -6,11 +6,15 @@
   <title>Exercise 12f</title>
 </head>
 <body>
-  <button class="js-button" onclick="displayMessage();">Add to cart</button>
+  <button class="js-button">Add to cart</button>
 
   <p class="js-message"></p>
 
   <script>
+    document.querySelector('.js-button').addEventListener('click', () => {
+      displayMessage();
+    });
+
     let timeOutId;
 
     function displayMessage() {
@@ -19,7 +23,7 @@
       
         clearTimeout(timeOutId);
 
-        timeOutId = setTimeout(function() {
+        timeOutId = setTimeout(() => {
           messageElement.innerHTML = '';
         }, 2000);
     }

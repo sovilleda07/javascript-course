@@ -6,15 +6,19 @@
   <title>Exercise 12d</title>
 </head>
 <body>
-  <button class="js-button" onclick="changeText();">Start</button>
+  <button class="js-button">Start</button>
 
   <script>
+    document.querySelector('.js-button').addEventListener('click', () => {
+      changeText();
+    });
+    
     function changeText() {
       let button = document.querySelector('.js-button');
       
       button.innerHTML = 'Loading...';
       
-      setTimeout(function() {
+      setTimeout(() => {
         button.innerHTML = 'Finished!'
       },1000)
     }

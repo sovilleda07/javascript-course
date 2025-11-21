@@ -8,15 +8,24 @@
 </head>
 
 <body>
-  <button onclick="addMessage();">Add</button>
-  <button onclick="removeMessage();">Remove</button>
+  <button class="js-add-button">Add</button>
+  <button class="js-remove-button">Remove</button>
   <script>
+
+    document.querySelector('.js-add-button').addEventListener('click', () => {
+      addMessage();
+    });
+
+    document.querySelector('.js-remove-button').addEventListener('click', () => {
+      removeMessage();
+    });
+
     let messages = 2;
 
     updateMessages();
 
     function updateMessages() {
-      setInterval(function () {
+      setInterval(() => {
         if (document.title === 'App') {
           document.title = `${messages} New messages`;
         } else {
